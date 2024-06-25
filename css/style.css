@@ -115,6 +115,7 @@ body {
 .hero-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    gap: 4rem;
     align-items: center;
     padding: 8rem 0;
 }
@@ -233,4 +234,36 @@ body {
 .box-detail {
     font-size: 1.4rem;
     color: var(--very_dark_gray);
+}
+
+/* Unlock Section */
+
+.unlock-container {
+    padding: 8rem 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 4rem;
+}
+
+.unlock-heading {
+    font-size: 3.6rem;
+    color: var(--very_dark_grayish_blue);
+}
+
+.unlock-detail {
+    margin-top: 2.4rem;
+    font-size: 1.4rem;
+    color: var(--very_dark_gray);
+}
+
+.btn-unlock {
+    margin-top: 3.2rem;
+    display: inline-block;
+    padding: 1.4rem 3.2rem;
+    background-color: var(--dark_moderate_lime_green);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.6rem;
+    border-radius: 4px;
 }
