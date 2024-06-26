@@ -5,12 +5,18 @@
     --very_dark_gray: #717171;
     --light_grayish_blue: #f5f7fa;
     --dark_gray: #4d4d4d;
+    --silver: #F5F7FA;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
 }
 
 html {
@@ -227,6 +233,10 @@ body {
     border-radius: 8px;
 }
 
+.box-card img {
+    width: 6.5rem;
+}
+
 .box-heading {
     font-size: 2.8rem;
 }
@@ -270,6 +280,10 @@ body {
 
 /* Achievement Section */
 
+.achievement-section {
+    background-color: var(--silver);
+}
+
 .achievement-container {
     padding: 8rem 0;
     display: grid;
@@ -297,11 +311,47 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    column-gap: 5rem;
     row-gap: 4.5rem;
 }
 
 .achievement-box {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
+}
+
+.achievement-box img {
+    width: 4.6rem;
+}
+
+.achievement-content h2 {
+    font-size: 2rem;
+}
+
+.achievement-content p {
+    margin-top: .5rem;
+    font-size: 1.3rem;
+    color: var(--dark_gray);
+}
+
+/* Calender Section */
+
+.calender-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    padding: 8rem 0;
+}
+
+.calender-heading {
+    font-size: 3.6rem;
+    color: var(--dark_gray);
+}
+
+.calender-detail {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    color: var(--very_dark_gray);
 }
