@@ -355,3 +355,62 @@ body {
     font-size: 1.6rem;
     color: var(--very_dark_gray);
 }
+
+.btn-calender {
+    margin-top: 1.5rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: var(--dark_moderate_lime_green);
+    color: var(--white);
+}
+
+/* Customer Section */
+
+.customer-section {
+    background-color: var(--silver);
+}
+
+.customer-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+    align-items: center;
+    padding: 8rem 0;
+}
+.customer-detail {
+    font-size: 1.6rem;
+    color: var(--very_dark_gray);
+    margin-bottom: 1.5rem;
+}
+
+.customer-name {
+    font-size: 2rem;
+    color: var(--dark_moderate_lime_green);
+    margin-bottom: .5rem;
+}
+
+.customer-company {
+    font-size: 1.6rem;
+    color: var(--very_dark_grayish_blue);
+}
+
+.customer-social {
+    margin-top: 2rem;
+}
+
+.customer-social img {
+    width: 4.8rem;
+    height: 4.8rem;
+}
+
+.customer-link {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--dark_moderate_lime_green);
+}
+
+
+
