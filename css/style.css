@@ -14,10 +14,10 @@
     box-sizing: border-box;
 }
 
-img {
+/* img {
     width: 100%;
     display: block;
-}
+} */
 
 html {
     font-size: 62.5%;
@@ -33,6 +33,7 @@ body {
 .container {
     max-width: 115rem;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .flex {
@@ -70,6 +71,7 @@ body {
     top: 0;
     background-color: var(--light_grayish_blue);
     padding: 1.5rem 0;
+    z-index: 99999;
 }
 
 .logo a {
@@ -278,6 +280,10 @@ body {
     border-radius: 4px;
 }
 
+.unlock-img img {
+    width: 100%;
+}
+
 /* Achievement Section */
 
 .achievement-section {
@@ -345,6 +351,10 @@ body {
     padding: 8rem 0;
 }
 
+.calender-img img {
+    width: 100%;
+}
+
 .calender-heading {
     font-size: 3.6rem;
     color: var(--dark_gray);
@@ -380,6 +390,10 @@ body {
     align-items: center;
     padding: 8rem 0;
 }
+
+.customer-img img {
+    width: 100%;
+}
 .customer-detail {
     font-size: 1.6rem;
     color: var(--very_dark_gray);
@@ -411,6 +425,238 @@ body {
     text-decoration: none;
     color: var(--dark_moderate_lime_green);
 }
+
+/* Community Section */
+
+.community-container {
+    padding: 8rem 0;
+}
+
+.community-content {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.community-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.community-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.community-box img {
+    width: 100%;
+}
+
+.community-box-detail {
+    width: 30rem;
+    background-color: var(--silver);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 1.5rem 2rem;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.community-box {
+    margin-top: 10rem;
+}
+
+.community-box:hover .community-box-detail {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: all .3s;
+}
+.community-box:not(hover) {
+    animation: show-overflow 2s forwards;
+}
+
+.community-box:not(hover) .community-box-detail {
+    animation: remove-data 1s forwards;
+}
+
+.community-box:hover {
+    animation:  remove-overflow 2s forwards;
+}
+
+.community-box-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.community-box-detail p {
+    font-size: 2rem;
+    color: var(--very_dark_gray);
+    margin-bottom: 1.5rem;
+}
+
+.community-btn {
+    display: block;
+    text-decoration: none;
+    color: var(--dark_moderate_lime_green);
+    font-size: 1.6rem;
+}
+
+/* Animation */
+
+@keyframes show-data {
+    50% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(-7rem);
+    }
+}
+
+@keyframes remove-overflow {
+    to {
+        overflow: initial;
+    }
+}
+
+@keyframes remove-data {
+    0% {
+        transform: translateY(-7rem);
+    }
+
+    50% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes show-overflow {
+    0% {
+        overflow: initial;
+        pointer-events: none;
+    }
+
+    50% {
+        overflow: hidden;
+    }
+}
+
+/* Demo Section */
+
+.demo-section {
+    background-color: var(--silver);
+}
+
+.demo-container {
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+.demo-container h2 {
+    font-size: 6.4rem;
+    color: #000;
+}
+
+.demo-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: var(--dark_moderate_lime_green);
+    color: var(--white);
+}
+
+/* Footer Section */
+
+.footer {
+background-color: var(--very_dark_grayish_blue);
+}
+
+.footer-container {
+    padding: 8rem 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    color: var(--white);
+}
+
+.footer-logo a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.col-2,
+.col-3,
+.col-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.col-2 h2,
+.col-3 h2,
+.col-4 h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.col-2 ul,
+.col-3 ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1rem;
+}
+
+.col-2 ul li a,
+.col-3 ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.col-4 h2 {
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
