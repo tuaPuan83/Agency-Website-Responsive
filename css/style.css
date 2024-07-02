@@ -223,7 +223,7 @@ body {
 .community-card {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     align-items: center;
     gap: 4rem;
     
@@ -446,7 +446,7 @@ body {
 
 .community-card {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .community-box {
@@ -652,10 +652,4 @@ background-color: var(--very_dark_grayish_blue);
     margin-bottom: 2rem;
 }
 
-
-@media (max-width: 1150px) {
-    .container {
-        padding: 0 1rem;
-    }
-}
 
